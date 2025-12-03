@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Outfit Combo Quest — Regenerated</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="Logo.png" alt="Logo" class="site-logo">
+      <div>
+        <h1>Outfit Combo Quest</h1>
+        <p class="lead">Counting principles made playful — build outfits, apply filters, and count possibilities.</p>
+      </div>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="menu">
+          <button class="active" data-view="game">Play Game</button>
+          <button data-view="tutorial">Tutorial</button>
+          <button data-view="docs">Documentation</button>
+          <button data-view="leaderboard">Leaderboard</button>
+          <button data-view="about">About & Credits</button>
+        </div>
+      </aside>
+
+      <main class="card" id="panel">
+        <section id="view-game">
+          <div class="game-top">
+            <div>
+              <strong>Level:</strong> <span id="level-label">Beginner</span>
+              <div class="meta">Time left: <span id="time-limit">60</span>s • Lives: <span id="lives">3</span></div>
+            </div>
+            <div class="stats">
+              <div class="badge">Score: <span id="score">0</span></div>
+              <div style="margin-left:8px;color:var(--plum)">Streak: <strong id="streak">0</strong></div>
+            </div>
+          </div>
+
+          <div class="preview" id="preview">
+            <div class="slots">
+              <div class="slot"><div id="shirt-item" class="label">—</div><div class="label">Shirts</div></div>
+              <div class="slot"><div id="pants-item" class="label">—</div><div class="label">Bottoms</div></div>
+              <div class="slot"><div id="shoes-item" class="label">—</div><div class="label">Shoes</div></div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="btn" id="draw-btn">Generate Scenario</button>
+            <button class="ghost" id="hint-btn">Give Hint</button>
+            <button class="ghost" id="submit-btn">Submit Answer</button>
+            <label style="margin-left:auto;color:var(--steel)">Difficulty:
+              <select id="difficulty" class="input" style="width:160px">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="challenge">
+            <h3 id="challenge-title">Challenge</h3>
+            <div class="meta" id="challenge-desc">Press "Generate Scenario" to start.</div>
+
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+              <div>Answer: <input id="answer-input" class="input" type="text" placeholder="Enter count or expression (e.g. 3*2*4)"></div>
+              <div class="meta">(Expressions allowed)</div>
+            </div>
+            <div id="feedback" style="margin-top:10px"></div>
+          </div>
+        </section>
+
+        <section id="view-tutorial" style="display:none">
+          <h2>Tutorial — How to play</h2>
+          <ol>
+            <li>Choose a difficulty.</li>
+            <li>Click <strong>Generate Scenario</strong> to produce a story-style problem.</li>
+            <li>Deduce usable counts and enter your answer.</li>
+            <li>Submit to earn points or lose lives.</li>
+          </ol>
+        </section>
+
+        <section id="view-docs" style="display:none">
+          <div class="doc">
+            <h2>Documentation</h2>
+            <h3>Game Overview</h3>
+            <p><strong>Goal:</strong> Use counting principles to compute valid outfit combinations under various conditions.</p>
+            <h3>Example Problems</h3>
+            <ol>
+              <li>Beginner: 4 tops, 3 bottoms, 2 shoes → 4×3×2 = 24</li>
+              <li>Intermediate: Pastel filter → multiply valid counts</li>
+              <li>Advanced: Remove wrinkle items before multiplying</li>
+            </ol>
+          </div>
+        </section>
+
+        <section id="view-leaderboard" style="display:none">
+          <h2>Leaderboard</h2>
+          <ol id="lb-list" class="leaderboard"></ol>
+          <div style="margin-top:12px;color:var(--steel)">Your name: <input id="player-name" class="input" placeholder="Type name"></div>
+        </section>
+
+        <section id="view-about" style="display:none">
+          <h2>About & Credits</h2>
+          <p>Outfit Combo Quest — regenerated package. Logo included.</p>
+        </section>
+
+      </main>
+    </div>
+
+    <div class="footer-note">Made for Discrete Mathematics — Outfit Combo Quest (Regenerated)</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
